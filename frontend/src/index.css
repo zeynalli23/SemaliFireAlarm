@@ -172,6 +172,15 @@ ul { list-style: none; }
   backdrop-filter: blur(5px);
   transition: all 0.3s;
 }
+
+@media (max-width: 768px) {
+  .swiper-button-next, .swiper-button-prev {
+    padding: 18px;
+  }
+  .swiper-button-next::after, .swiper-button-prev::after {
+    font-size: 18px !important;
+  }
+}
 .swiper-button-next:hover, .swiper-button-prev:hover {
   background: var(--color-primary);
 }

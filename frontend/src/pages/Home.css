@@ -1,15 +1,19 @@
 .home-page {
   background-color: var(--color-bg);
   min-height: 100vh;
+  overflow-x: hidden; /* Prevent horizontal scroll */
+  width: 100%;
+  position: relative;
 }
 
 /* Hero Section */
 .hero-section {
   position: relative;
   height: 100vh;
-  min-height: 700px;
+  min-height: 500px; /* Reduced for mobile */
   width: 100%;
   background: #0b0b0e; /* Prevent white flash during load/switch */
+  overflow: hidden;
 }
 
 .hero-swiper {
@@ -54,6 +58,13 @@
   color: #fff;
 }
 
+@media (max-width: 768px) {
+  .hero-title {
+    font-size: 32px;
+    margin-bottom: 16px;
+  }
+}
+
 .text-gradient {
   background: linear-gradient(135deg, var(--color-primary), var(--color-accent));
   -webkit-background-clip: text;
@@ -67,6 +78,13 @@
   color: rgba(255, 255, 255, 0.8);
   margin-bottom: 40px;
   line-height: 1.6;
+}
+
+@media (max-width: 768px) {
+  .hero-subtitle {
+    font-size: 16px;
+    margin-bottom: 24px;
+  }
 }
 
 .hero-section .btn-outline {
